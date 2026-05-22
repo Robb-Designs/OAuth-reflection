@@ -34,6 +34,7 @@ https://app.com/profile/malicious
 
 ```
 The application could have an open redirect vulnerability if the provider accepts any redirect URI that starts with `https://app.com`, allowing attackers to redirect users to malicious sites after authentication. To prevent this, the application should register an exact callback URL and ensure that the OAuth provider validates the `redirect_URI` against this specific URL.
+
 ---
 
 ## UX Design for OAuth Flows
