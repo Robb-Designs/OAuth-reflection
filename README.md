@@ -34,3 +34,11 @@ https://app.com/profile/malicious
 
 ```
 The application could have an open redirect vulnerability if the provider accepts any redirect URI that starts with `https://app.com`, allowing attackers to redirect users to malicious sites after authentication. To prevent this, the application should register an exact callback URL and ensure that the OAuth provider validates the `redirect_URI` against this specific URL.
+---
+
+## UX Design for OAuth Flows
+
+When designing the user experience (UX) for OAuth flows, it is important to consider the following: 
+**Login with Google**: Using “Login with Google” makes signing in much faster and easier for users because they do not need to create or remember another password. This can improve user experience and increase sign-ups.
+
+However, OAuth flows tend to add alot of security complexity for developers, and if not implemented correctly, can lead to security vulnerabilities. For example, if the state parameter is not used or validated properly, it can lead to CSRF attacks. Additionally, if the redirect URI is not properly validated, it can lead to open redirect_uri vulnerabilities.
